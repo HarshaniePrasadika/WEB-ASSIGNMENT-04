@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login and Registration Page</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function showLoginForm() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('register-form').style.display = 'none';
+    }
+
+    function showRegisterForm() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('register-form').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+<div class="main">
+	<div class="sidebar">
+			<header>HARSHANI</header>
+			<img src="logo.jpg" class="logo" width="70" height="70">
+			
+			<ul>
+        <li><a href="myweb.html">HOME</a></li>
+        <li><a href="About.html">ABOUT</a></li>
+        <li><a href="skills.html">SKILLS</a></li>
+        <li><a href="work.html">WORK PLACE</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+        <li><a href="project_details.html">PROJECT</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+	</div>
+  <div class="login-container">
+    <h2>Login and Registration</h2>
+    <div id="login-form">
+	<form action="login.php" method="post">
+        <div class="form-group">
+          <label for="login-username">Username:</label>
+          <input type="text" id="login-username" name="login-username" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="login-password" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login">
+        </div>
+      </form>
+      <div class="toggle-forms">
+        <a href="#" onclick="showRegisterForm()">Register</a>
+      </div>
+    </div>
+	<div id="register-form" style="display: none;">
+      <form action="login.php" method="post">
+        <div class="form-group">
+          <label for="register-username">Username:</label>
+          <input type="text" id="register-username" name="register-username" required>
+        </div>
+        <div class="form-group">
+          <label for="register-password">Password:</label>
+          <input type="password" id="register-password" name="register-password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+      <div class="toggle-forms">
+        <a href="#" onclick="showLoginForm()">Login</a>
+      </div>
+    </div>
+</div>
+  </div>
+ </body>
+</html>

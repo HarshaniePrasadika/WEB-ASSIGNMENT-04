@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+      <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <link rel="stylesheet" href="style.css">
+    <script src="validate_form.js"></script>
+</head>
+<body>
+
+<div class="main">
+    <div class="sidebar">
+            <header>HARSHANI</header>
+            <img src="logo.jpg" class="logo" width="70" height="70">
+            
+            <ul>
+                <li><a href="myweb.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="work.html">WORK PLACE</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="project_details.html">PROJECT</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+    </div>
+    <div class="image">
+            <img src="girl1.jpg" class="girl" align="right">
+    </div>
+    <div class="info">
+    <h1>Contact<span>Me!</span></h1><br>
+    </div>
+    
+    <div class="contact" id="contact">
+    
+    <form action="process_form.php" method="post" onclick="return validateForm() ">
+    
+    <div class="input-box">
+        <input type="text" placeholder="Full Name" id="name" name="name" >
+        <span style="color:red;"><?php if(isset($errors['name'])) echo $errors['name']; ?></span>
+        
+        <input type="text" placeholder="Email Addess" id="email" name="email" >
+        <span style="color:red;"><?php if(isset($errors['email'])) echo $errors['email']; ?></style></span>
+    </div>
+
+        <div class="input-box">
+            <input type="number" placeholder="Mobile Number" required>
+            <input type="text" placeholder="Subject">
+        </div>
+        
+        <textarea name="message"  id="message" cols="14" rows="2" placeholder="Your Message" ></textarea>
+        <span style="color:red;"><?php if(isset($errors['message'])) echo $errors['message']; ?></span><br><br>
+        
+        <input type="submit" value="SUBMIT" class="btn">
+    </form>
+</div>
+    
+
+</body>
+</html>
